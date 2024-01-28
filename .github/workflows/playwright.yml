@@ -2,9 +2,9 @@ name: Playwright Tests
 
 on:
   schedule:
-    - cron: '10 16 * * *'  # Ejecuta a las 15:30 pm UTC todos los días
-    - cron: '20 16 * * *'  # Ejecuta a las 15:40 pm UTC todos los días
-
+    - cron: '29 5 * * *'  # Se ejecuto a las 16:26 
+    - cron: '29 15 * * *'  # Se ejecuto a las 16:29
+   
 jobs:
   test:
     timeout-minutes: 60
