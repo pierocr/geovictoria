@@ -2,8 +2,8 @@ name: Playwright Tests
 
 on:
   schedule:
-    - cron: '30 15 * * *'  # Ejecuta a las 15:30 pm UTC todos los días
-    - cron: '40 15 * * *'  # Ejecuta a las 15:40 pm UTC todos los días
+    - cron: '10 16 * * *'  # Ejecuta a las 15:30 pm UTC todos los días
+    - cron: '20 16 * * *'  # Ejecuta a las 15:40 pm UTC todos los días
 
 jobs:
   test:

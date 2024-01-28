@@ -1,7 +1,10 @@
 import { test, expect } from '@playwright/test';
 
 test('geovictoria', async ({ page }) => {
-  await page.goto('https://www.geovictoria.com/es-cl/');
+
+    const startTime = new Date(); // Obtener la hora de inicio
+
+    await page.goto('https://www.geovictoria.com/es-cl/');
 
     await page.waitForSelector('.Navbar__button');
 
@@ -15,8 +18,6 @@ test('geovictoria', async ({ page }) => {
 
     await page.click('#btnLogin');
 
-    await page.waitForTimeout(2000);
-
     await page.frameLocator('iframe[name="myFrame"]').getByRole('button', { name: 'PC' }).click();
 
     await page.waitForTimeout(2000);
@@ -27,7 +28,11 @@ test('geovictoria', async ({ page }) => {
 
     await page.getByRole('button', { name: 'Sí' }).click();
 
-    await page.waitForTimeout(2000);
+    const endTime = new Date(); // Obtener la hora de finalización
+
+    // Imprimir la hora de inicio y finalización en la consola
+    console.log(`Hora de inicio: ${startTime.toLocaleTimeString()}`);
+    console.log(`Hora de finalización: ${endTime.toLocaleTimeString()}`);
 
     await page.close();
 });
