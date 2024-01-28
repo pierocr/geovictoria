@@ -15,7 +15,7 @@ test('geovictoria', async ({ page }) => {
 
     await page.click('#btnLogin');
 
-    await page.waitForTimeout(2000);
+    await page.waitForTimeout(3000);
 
     await page.frameLocator('iframe[name="myFrame"]').getByRole('button', { name: 'PC' }).click();
 
